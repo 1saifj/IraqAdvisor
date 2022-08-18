@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:iraq_advisor/presentation/page/main.dart';
+import 'package:iraq_advisor/presentation/page/home.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,6 +17,11 @@ class App extends ConsumerStatefulWidget {
 class _AppState extends ConsumerState<App> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: Main());
+    return const Directionality(
+      textDirection: TextDirection.rtl,
+      child: MaterialApp(
+        home: Home(),
+      ),
+    );
   }
 }
